@@ -1,42 +1,51 @@
 import React from "react";
 import "./MobitelLogin.css";
-import mobitelImage from "./mobitel-image.jpg"; // Add your image path here
+import mobitelImage from "./mobitel-image.jpg"; // Ensure you have an image asset
 
-const MobitelLogin = () => {
-  const handleLogin = () => {
-    alert("Logging in... (Implement login logic here)");
+const PlayAndWinLogin = () => {
+  const handleLoginWithFacebook = () => {
+    alert("Logging in with Facebook...");
+    // Implement Facebook login logic here
   };
 
-  const handleWinData = () => {
-    alert("Win Data button clicked! Implement win data logic here.");
+  const handleLoginWithMobitel = () => {
+    alert("Logging in with Mobitel Selfcare account...");
+    // Implement Mobitel login logic here
+  };
+
+  const handleLoginWithGithub = () => {
+    alert("Logging in with GitHub account...");
+    // Implement GitHub login logic here
+  };
+
+  const handlePlayAndWinClick = () => {
+    alert("Play and Win button clicked! Implement the play and win logic here.");
   };
 
   return (
-    <div className="mobitel-login-container">
-      <div className="mobitel-login-left">
-        <img src={mobitelImage} alt="Mobitel" className="mobitel-image" />
+    <div className="play-and-win-container">
+      <div className="play-and-win-left">
+        <img src={mobitelImage} alt="Mobitel" className="play-and-win-image" />
       </div>
-      <div className="mobitel-login-right">
-        <div className="mobitel-login-form">
-          <h2>Login</h2>
-          <input type="text" placeholder="Mobile Number" />
-          <input type="password" placeholder="Password" />
-          <button className="login-button" onClick={handleLogin}>
-            Log In
+      <div className="play-and-win-right">
+        <div className="play-and-win-form">
+          <h2>Play and Win</h2>
+          <p>Login using any of the following options and start playing to win exciting rewards!</p>
+          
+          <button className="login-button fb-button" onClick={handleLoginWithFacebook}>
+            Login with Facebook
           </button>
-          <button className="win-data-button" onClick={handleWinData}>
-            Win Data
+          <button className="login-button mobitel-button" onClick={handleLoginWithMobitel}>
+            Login with Mobitel Selfcare Account
           </button>
-          <div className="divider">OR</div>
-          <button className="otp-button">Login with OTP</button>
-          <a href="#" className="forgot-password-link">Forgot Password?</a>
-          <div className="signup-link">
-            Don't have an account? <a href="#">Sign up here</a>
-          </div>
+          <button className="login-button github-button" onClick={handleLoginWithGithub}>
+            Login with GitHub Account
+          </button>
+        
         </div>
       </div>
     </div>
   );
 };
 
-export default MobitelLogin;
+export default PlayAndWinLogin;
