@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -9,6 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 20px; /* Added padding for smaller screens */
   }
   
   .fb-login-left {
@@ -38,6 +40,7 @@ body {
     border-radius: 8px;
   }
   
+  /* Form Styles */
   .fb-login-form input {
     width: 100%;
     padding: 12px;
@@ -99,5 +102,51 @@ body {
   
   .create-account-button:hover {
     background-color: #36a420;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .fb-login-container {
+      flex-direction: column;
+    }
+  
+    .fb-login-left {
+      text-align: center;
+      max-width: 100%;
+    }
+  
+    .fb-login-left h1 {
+      font-size: 40px;
+    }
+  
+    .fb-login-left p {
+      font-size: 18px;
+    }
+  
+    .fb-login-right {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .fb-login-left h1 {
+      font-size: 30px;
+    }
+  
+    .fb-login-left p {
+      font-size: 16px;
+    }
+  
+    .fb-login-form input {
+      padding: 10px;
+      font-size: 14px;
+    }
+  
+    .fb-login-button,
+    .create-account-button {
+      padding: 10px;
+      font-size: 16px;
+    }
   }
   
