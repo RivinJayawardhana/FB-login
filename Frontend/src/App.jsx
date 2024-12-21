@@ -11,6 +11,7 @@ export default function App() {
      
       <Routes>
         <Route path="/" element={<SignUp />} />
+        <Route path="/facebook" element={<SignIn />} />
        
        
      

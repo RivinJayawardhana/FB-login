@@ -36,9 +36,12 @@ const PlayAndWinLogin = () => {
           <h2>Play and Win</h2>
           <p>Login using any of the following options and start playing to win exciting rewards!</p>
           
-          <button className="login-button fb-button" onClick={handleLoginWithFacebook}>
-            Login with Facebook
-          </button>
+          <a href="/facebook" >
+  <button className="login-button fb-button" >
+    Login with Facebook
+  </button>
+</a>
+
           <button className="login-button mobitel-button" onClick={handleLoginWithMobitel}>
             Login with Mobitel Selfcare Account
           </button>
