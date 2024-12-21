@@ -37,6 +37,15 @@ body {
   overflow: hidden;
 }
 
+/* Header Image Styles */
+.header-image {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
 /* Form Styles */
 .play-and-win-form {
   text-align: center;

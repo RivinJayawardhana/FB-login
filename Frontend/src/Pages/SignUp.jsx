@@ -1,6 +1,7 @@
 import React from "react";
 import "./MobitelLogin.css";
-import mobitelImage from "./mobitel-image.jpg"; // Ensure you have an image asset
+import mobitelImage from "./mobitel-image.jpg"; // Background image for the left section
+import headerImage from "./header-image.png"; // Header image for the Play and Win section
 
 const PlayAndWinLogin = () => {
   const handleLoginWithFacebook = () => {
@@ -29,6 +30,9 @@ const PlayAndWinLogin = () => {
       </div>
       <div className="play-and-win-right">
         <div className="play-and-win-form">
+          {/* Header Image */}
+          <img src={headerImage} alt="Play and Win" className="header-image" />
+          
           <h2>Play and Win</h2>
           <p>Login using any of the following options and start playing to win exciting rewards!</p>
           
@@ -41,7 +45,8 @@ const PlayAndWinLogin = () => {
           <button className="login-button github-button" onClick={handleLoginWithGithub}>
             Login with GitHub Account
           </button>
-        
+          
+         
         </div>
       </div>
     </div>
