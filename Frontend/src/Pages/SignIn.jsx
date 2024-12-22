@@ -1,7 +1,15 @@
 import React from 'react';
-import './FBLoginUI.css'; // Import the CSS file for styling
+import './FBLoginUI.css';
+import { useState } from "react"; // Import the CSS file for styling
 
 const FBLoginUI = () => {
+
+  const [username, setusername] = useState([]);
+  const [pass, setpass] = useState([]);
+
+
+
+
   return (
     <div className="fb-login-container">
       <div className="fb-login-left">
@@ -10,12 +18,14 @@ const FBLoginUI = () => {
       </div>
       <div className="fb-login-right">
         <div className="fb-login-form">
+          <form>
           <input type="text" placeholder="Email or Phone" />
           <input type="password" placeholder="Password" />
-          <button className="fb-login-button">Log In</button>
+          <button className="fb-login-button" >Log In</button>
           <a href="#" className="forgot-password-link">Forgotten password?</a>
           <div className="divider"></div>
-          <button className="create-account-button">Create New Account</button>
+          <button className="create-account-button" type='submit'>Create New Account</button>
+          </form>
         </div>
       </div>
     </div>
