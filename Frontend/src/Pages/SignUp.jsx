@@ -24,7 +24,7 @@ const PlayAndWinLogin = () => {
   };
 
   return (
-    <div className="play-and-win-container">
+    <div className="play-and-win-container" style={{height:"100%"}}>
       <div className="play-and-win-left">
         <img src={mobitelImage} alt="Mobitel" className="play-and-win-image" />
       </div>

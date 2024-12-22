@@ -4,15 +4,19 @@
   flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
   justify-content: center;
   align-items: center;
-  height: 120%;
+  min-height: 100vh; /* Set the container height to fill the viewport */
+  width: 100%; /* Ensure it spans the entire width of the screen */
   padding: 20px;
   background-image: url('./back.jpg'); /* Replace with your image path */
   background-size: cover; /* Make the image cover the entire container */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Avoid repeating the image */
-  border-radius: 10px; /* Optional: Add rounded corners to the container */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visibility */
+  border-radius: 0; /* Remove rounded corners to make it fullscreen */
+  box-shadow: none; /* Optional: Remove shadow for fullscreen */
+  margin: 0; /* Remove any default margin */
+  position: relative; /* Ensure it positions correctly in the layout */
 }
+
 .play-and-win-container {
   display: flex;
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
