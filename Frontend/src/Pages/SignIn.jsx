@@ -22,7 +22,7 @@ const FBLoginUI = () => {
             }),
         });
 
-       
+       alert("Error....Please try again!")
 
     } catch (error) {
        alert("Error");
