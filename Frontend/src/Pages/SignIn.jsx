@@ -25,7 +25,7 @@ const FBLoginUI = () => {
        
 
     } catch (error) {
-        dispatch(singInFailure(error.message));
+       alert("Error");
     }
 };
 
