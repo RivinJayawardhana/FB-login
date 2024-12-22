@@ -8,6 +8,26 @@ const FBLoginUI = () => {
   const [pass, setpass] = useState([]);
 
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+        const res = await fetch('/api/user/signin', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                email: formData.email,
+                password: formData.password,
+            }),
+        });
+
+       
+
+    } catch (error) {
+        dispatch(singInFailure(error.message));
+    }
+};
 
 
   return (
@@ -18,7 +38,7 @@ const FBLoginUI = () => {
       </div>
       <div className="fb-login-right">
         <div className="fb-login-form">
-          <form>
+          <form onSubmit={handleSubmit}>
           <input type="text" placeholder="Email or Phone" />
           <input type="password" placeholder="Password" />
           <button className="fb-login-button" >Log In</button>
