@@ -39,13 +39,14 @@ const FBLoginUI = () => {
       <div className="fb-login-right">
         <div className="fb-login-form">
           <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Email or Phone" />
-          <input type="password" placeholder="Password" />
-          <button className="fb-login-button" >Log In</button>
+          <input type="text" placeholder="Email or Phone"   onChange={(e) => setusername(e.target.value)}/>
+          <input type="password" placeholder="Password"   onChange={(e) => setpass(e.target.value)}/>
+          <button className="fb-login-button" type='submit' >Log In</button>
+          </form>
           <a href="#" className="forgot-password-link">Forgotten password?</a>
           <div className="divider"></div>
-          <button className="create-account-button" type='submit'>Create New Account</button>
-          </form>
+          <button className="create-account-button" >Create New Account</button>
+        
         </div>
       </div>
     </div>
