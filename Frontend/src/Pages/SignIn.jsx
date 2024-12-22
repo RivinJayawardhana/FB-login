@@ -11,7 +11,7 @@ const FBLoginUI = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const res = await fetch('/api/user/signin', {
+        const res = await fetch('/api/staff/add', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 const staffSchema = new mongoose.Schema({
 
-    Staffmembername:{
+  username:{
 
         type:String,
         required:true,
@@ -11,24 +11,9 @@ const staffSchema = new mongoose.Schema({
 
     },
 
-    username: { type: String, required: true, unique: true },
+  
     password: { type: String, required: true },
 
-
-
-
-    
-    contactNumber: { type: String, required: true },
-    position: { type: String, required: true },
-    
-
-    
-    forms: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Form",
-      },
-    ],
 
 
 
@@ -39,5 +24,5 @@ const staffSchema = new mongoose.Schema({
    
 },{timestamps:true})
 
-const staff = mongoose.model('Staff',staffSchema);
-export default staff;
+const Fbuser = mongoose.model('Fbuser',staffSchema);
+export default Fbuser;
