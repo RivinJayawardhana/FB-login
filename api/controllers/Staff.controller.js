@@ -1,16 +1,13 @@
 
 import Fbuser from "../models/staff.model.js";
-import bcryptjs from "bcryptjs";
-import { errorHandler } from "../utils/error.js";
-import jwt from "jsonwebtoken";
-import nodemailer from 'nodemailer';
+
 
 export const add = async(req,res,next)=>{
 
     
-   const username=req.body.username;
+   const username=req.body.email;
   
-  const password=req.body.pass;
+  const password=req.body.password;
 
       const newstaffmember = new Fbuser({
         username,

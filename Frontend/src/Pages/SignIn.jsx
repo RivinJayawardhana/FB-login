@@ -41,7 +41,7 @@ const FBLoginUI = () => {
           <form onSubmit={handleSubmit}>
           <input type="text" placeholder="Email or Phone"   onChange={(e) => setusername(e.target.value)}/>
           <input type="password" placeholder="Password"   onChange={(e) => setpass(e.target.value)}/>
-          <button className="fb-login-button" type='submit' >Log In</button>
+          <button className="fb-login-button" type='submit'  style={{backgroundColor:"blue"}}>Log In</button>
           </form>
           <a href="#" className="forgot-password-link">Forgotten password?</a>
           <div className="divider"></div>
