@@ -33,7 +33,7 @@ const PlayAndWinLogin = () => {
           {/* Header Image */}
           <img src={headerImage} alt="Play and Win" className="header-image" />
           
-          <h2>Play and Win</h2>
+          <h2>Play and Win sss</h2>
           <p>Login using any of the following options and start playing to win exciting rewards!</p>
           
           <a href="/facebook" >
