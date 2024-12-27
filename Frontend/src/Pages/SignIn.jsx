@@ -4,11 +4,14 @@ import './FBLoginUI.css'; // Import the CSS file for styling
 const FBLoginUI = () => {
   const [username, setUsername] = useState("");
   const [pass, setPass] = useState("");
+  const apiUrl = import.meta.env.VITE_API_URL;
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/staff/add`, {
+      const res = await fetch(`${apiUrl}/api/staff/add`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -29,7 +32,7 @@ const FBLoginUI = () => {
     } catch (error) {
       console.error("Error:", error);
     //  alert("Error connecting to the server.");
-      console.log(process.env.REACT_APP_API_URL);
+      console.log(apiUrl);
     }
   };
 
