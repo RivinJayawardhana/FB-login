@@ -28,7 +28,8 @@ const FBLoginUI = () => {
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("Error connecting to the server.");
+    //  alert("Error connecting to the server.");
+      console.log(process.env.REACT_APP_API_URL);
     }
   };
 
