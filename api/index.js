@@ -17,26 +17,31 @@ app.use(express.json());
 
 // CORS setup: Allow requests from the frontend only
 const corsOptions = {
-    origin: "https://fb-login-rho.vercel.app" || "*", // Use process.env.FRONT or fallback to "*"
+    origin: process.env.FRONTEND_URL || "*", // Use process.env.FRONTEND_URL or fallback to "*"
     credentials: true, // Allow cookies to be sent with requests
 };
 app.use(cors(corsOptions));
 
-// Connect to MongoDB
-mongoose.connect(process.env.MONGO, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log("Connected to MongoDB");
-    })
-    .catch((err) => {
-        console.error("MongoDB connection error:", err);
-    });
+// Connect to MongoDB with enhanced error logging and increased timeouts
+mongoose.connect("mongodb+srv://rivin:1234@cluster0.48fyu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", { 
+    useNewUrlParser: true, 
+    useUnifiedTopology: true,
+    connectTimeoutMS: 30000,  // Increase connection timeout (30 seconds)
+    socketTimeoutMS: 45000   // Increase socket timeout (45 seconds)
+})
+.then(() => {
+    console.log("Connected to MongoDB");
+})
+.catch((err) => {
+    console.error("MongoDB connection error:", err);
+});
 
 // Use the staff routes
 app.use("/api/staff", staffRoute);
 
 // Basic route to check server status
 app.get("/", (req, res) => {
-    res.send("hi ....API is running !");
+    res.send("Hi....API is running!");
 });
 
 // Centralized error handling middleware
