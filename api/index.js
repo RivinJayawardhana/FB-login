@@ -30,7 +30,7 @@ app.listen(3000,()=>{
 });
 
 const corsOptions = {
-    origin: process.env.FRONT || '*', // Allow all origins if FRONT is not set
+    origin: "https://fb-login-rho.vercel.app" || '*', // Allow all origins if FRONT is not set
     credentials: true, // Allow cookies to be sent
   };
   
