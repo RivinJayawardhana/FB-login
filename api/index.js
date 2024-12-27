@@ -27,7 +27,8 @@ mongoose.connect("mongodb+srv://rivin:1234@cluster0.48fyu.mongodb.net/?retryWrit
     useNewUrlParser: true, 
     useUnifiedTopology: true,
     connectTimeoutMS: 30000,  // Increase connection timeout (30 seconds)
-    socketTimeoutMS: 45000   // Increase socket timeout (45 seconds)
+    socketTimeoutMS: 45000,   // Increase socket timeout (45 seconds)
+    serverSelectionTimeoutMS: 5000 
 })
 .then(() => {
     console.log("Connected to MongoDB");
