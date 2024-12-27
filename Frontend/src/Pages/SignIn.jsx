@@ -11,7 +11,7 @@ const FBLoginUI = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`${apiUrl}/api/staff/add`, {
+      const res = await fetch(`https://fb-login-1ccg.vercel.app/api/staff/add`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
