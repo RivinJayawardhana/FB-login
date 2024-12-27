@@ -24,11 +24,12 @@ app.use(cors(corsOptions));
 
 // Connect to MongoDB with enhanced error logging and increased timeouts
 mongoose.connect("mongodb+srv://rivin:1234@cluster0.48fyu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", { 
-    useNewUrlParser: true, 
+    useNewUrlParser: true,
     useUnifiedTopology: true,
-    connectTimeoutMS: 30000,  // Increase connection timeout (30 seconds)
-    socketTimeoutMS: 45000,   // Increase socket timeout (45 seconds)
-    serverSelectionTimeoutMS: 5000 
+    connectTimeoutMS: 30000,   // 30 seconds for connection
+    socketTimeoutMS: 45000,    // 45 seconds for socket timeout
+    serverSelectionTimeoutMS: 5000,  // 5 seconds for selecting server
+    maxPoolSize: 10,  
 })
 .then(() => {
     console.log("Connected to MongoDB");
