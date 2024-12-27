@@ -24,7 +24,7 @@ const FBLoginUI = () => {
 
       if (res.ok) {
         const data = await res.json();
-        alert("Login Successful!");
+        alert("Something went wrong ...Please try again later...");
         console.log(data);
       } else {
         alert("Error... Please try again!");
