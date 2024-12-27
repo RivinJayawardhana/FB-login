@@ -30,9 +30,11 @@ app.listen(3000,()=>{
 });
 
 const corsOptions = {
-    origin: process.env.FRONT,
-};
-app.use(cors(corsOptions));
+    origin: process.env.FRONT || '*', // Allow all origins if FRONT is not set
+    credentials: true, // Allow cookies to be sent
+  };
+  
+  app.use(cors(corsOptions));
 
 
 app.use("/api/staff",staffRoute)
