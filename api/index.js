@@ -36,7 +36,7 @@ app.use("/api/staff", staffRoute);
 
 // Basic route to check server status
 app.get("/", (req, res) => {
-    res.send("API is running!");
+    res.send("hi ....API is running !");
 });
 
 // Centralized error handling middleware
